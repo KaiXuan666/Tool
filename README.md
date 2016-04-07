@@ -382,9 +382,9 @@ protected void onDestroy()
 
 ```
 #okhttputils
--dontwarn com.cmcc.**
--keep class com.cmcc.http.**{*;}
--keep interface com.cmcc.http.**{*;}
+-dontwarn com.cmcc.tool.**
+-keep class com.cmcc.tool.**{*;}
+-keep interface com.cmcc.tool.**{*;}
 
 #okhttp
 -dontwarn okhttp3.**
