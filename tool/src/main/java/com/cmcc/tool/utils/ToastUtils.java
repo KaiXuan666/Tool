@@ -1,6 +1,7 @@
 package com.cmcc.tool.utils;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 /**
@@ -11,13 +12,14 @@ import android.widget.Toast;
 public class ToastUtils {
     private static Toast toast = null; //Toast的对象！
 
-    public static void showToast(Context mContext, String id) {
+    public static void showToast(Context mContext, String message) {
         if (toast == null) {
-            toast = Toast.makeText(mContext, id, Toast.LENGTH_SHORT);
+            toast = Toast.makeText(mContext, message, Toast.LENGTH_SHORT);
         }
         else {
-            toast.setText(id);
+            toast.setText(message);
         }
         toast.show();
+        Log.e("Toast",message);
     }
 }

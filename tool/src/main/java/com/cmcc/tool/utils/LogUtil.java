@@ -33,6 +33,8 @@ public class LogUtil {
      */
     private LogWriter logWriter;
 
+    private final static boolean isShowLog = true;
+
     /**
      * 写入本地日志线程
      */
@@ -268,10 +270,8 @@ public class LogUtil {
      *
      * @param tag     日志标记
      * @param message 日志信息
-     * @param isShowLog    是否显示
      */
-    public static void v(String tag, String message,boolean isShowLog) {
-
+    public static void v(String tag, String message) {
         if (isShowLog) {
             Log.v(tag, getDetailMessage(message));
         }
@@ -281,9 +281,8 @@ public class LogUtil {
      * verbose详细日志
      *
      * @param message 日志信息
-     * @param isShowLog    是否显示
      */
-    public static void v(String message,boolean isShowLog) {
+    public static void v(String message) {
         if (isShowLog) {
             String[] output = getTagAndDetailMessage(message);
             Log.v(output[0], output[1]);
@@ -295,9 +294,8 @@ public class LogUtil {
      *
      * @param tag     日志标记
      * @param message 日志信息
-     * @param isShowLog    是否显示
      */
-    public static void e(String tag, String message,boolean isShowLog) {
+    public static void e(String tag, String message) {
 
         if (isShowLog) {
             Log.e(tag, getDetailMessage(message));
@@ -308,9 +306,8 @@ public class LogUtil {
      * error错误日志
      *
      * @param message 日志信息
-     * @param isShowLog    isShowLog
      */
-    public static void e(String message,boolean isShowLog) {
+    public static void e(String message) {
 
         if (isShowLog) {
             String[] output = getTagAndDetailMessage(message);
@@ -323,9 +320,8 @@ public class LogUtil {
      *
      * @param tag     日志标记
      * @param message 日志信息
-     * @param isShowLog    isShowLog
      */
-    public static void i(String tag, String message,boolean isShowLog) {
+    public static void i(String tag, String message) {
 
         if (isShowLog) {
             Log.i(tag, getDetailMessage(message));
@@ -336,9 +332,8 @@ public class LogUtil {
      * info信息日志
      *
      * @param message 日志信息
-     * @param isShowLog    isShowLog
      */
-    public static void i(String message,boolean isShowLog) {
+    public static void i(String message) {
 
         if (isShowLog) {
             String[] output = getTagAndDetailMessage(message);
@@ -351,10 +346,8 @@ public class LogUtil {
      *
      * @param tag     日志标记
      * @param message 日志信息
-     * @param isShowLog    isShowLog
      */
-    public static void d(String tag, String message,boolean isShowLog) {
-
+    public static void d(String tag, String message) {
         if (isShowLog) {
             Log.d(tag, getDetailMessage(message));
         }
@@ -364,10 +357,8 @@ public class LogUtil {
      * debug调试日志
      *
      * @param message 日志信息
-     * @param isShowLog    isShowLog
      */
-    public static void d(String message,boolean isShowLog) {
-
+    public static void d(String message) {
         if (isShowLog) {
             String[] output = getTagAndDetailMessage(message);
             Log.d(output[0], output[1]);
@@ -379,10 +370,8 @@ public class LogUtil {
      *
      * @param tag     日志标记
      * @param message 日志信息
-     * @param isShowLog  isShowLog
      */
-    public static void w(String tag, String message,boolean isShowLog) {
-
+    public static void w(String tag, String message) {
         if (isShowLog) {
             Log.w(tag, getDetailMessage(message));
         }
@@ -392,10 +381,8 @@ public class LogUtil {
      * warn警告日志
      *
      * @param message 日志信息
-     * @param isShowLog    isShowLog
      */
-    public static void w(String message,boolean isShowLog) {
-
+    public static void w(String message) {
         if (isShowLog) {
             String[] output = getTagAndDetailMessage(message);
             Log.w(output[0], output[1]);
